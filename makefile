@@ -26,5 +26,12 @@ $(OBJ_DIR)/%.obj: $(SRC_DIR)/%.cpp
 $(TARGET): $(OBJECTS)
 	$(CXX) $(CXX_FLAGS) $^ -o $@ $(LIB_DIR) $(LIBS)
 
+help:
+	@echo ------- Application -------
+	@echo make config=[debug,release]
+	@echo ---------------------------
+	@echo config.debug   = "-Wall -DDEBUG -g"
+	@echo config.release = "-Wall -DNEBUG -O3"
+
 clean:
 	rm -rf ./obj/*.obj
