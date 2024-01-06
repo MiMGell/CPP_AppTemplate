@@ -12,10 +12,10 @@ LIB_DIR = -L ./vcpkg/installed/**/lib
 LIBS = -lShell32
 
 SRC_DIR = ./src
-OBJ_DIR = ./bin
+OBJ_DIR = ./obj
 TARGET = ./bin/$(PROJECT).exe
 
-SOURCES = $(wildcard $(SRC_DIR)/*.cpp)
+SOURCES = $(wildcard $(SRC_DIR)/*.cpp $(SRC_DIR)/**/*.cpp)
 OBJECTS = $(SOURCES:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.obj)
 
 all = $(TARGET)
@@ -27,4 +27,4 @@ $(TARGET): $(OBJECTS)
 	$(CXX) $(CXX_FLAGS) $^ -o $@ $(LIB_DIR) $(LIBS)
 
 clean:
-	rm -rf ./bin/*.obj
+	rm -rf ./obj/*.obj
