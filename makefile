@@ -7,8 +7,8 @@ CXX_FLAGS_debug = -Wall -DDEBUG -g
 CXX_FLAGS_release = -Wall -DNDEBUG -O3
 CXX_FLAGS = $(CXX_FLAGS_$(config))
 
-INC_DIR = -I ./vcpkg/installed/**/include 
-LIB_DIR = -L ./vcpkg/installed/**/lib
+INC_DIR = -I ./vendor/vcpkg/installed/**/include
+LIB_DIR = -L ./vendor/vcpkg/installed/**/lib
 LIBS = -lShell32
 
 SRC_DIR = ./src
