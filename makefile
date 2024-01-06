@@ -1,7 +1,11 @@
+config ?= release 
+
 PROJECT = App
 
 CXX = clang++
-CXX_FLAGS = -Wall -O3
+CXX_FLAGS_debug = -Wall -DDEBUG -g
+CXX_FLAGS_release = -Wall -DNDEBUG -O3
+CXX_FLAGS = $(CXX_FLAGS_$(config))
 
 INC_DIR = -I ./vcpkg/installed/**/include 
 LIB_DIR = -L ./vcpkg/installed/**/lib
