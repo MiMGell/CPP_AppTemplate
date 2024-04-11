@@ -6,10 +6,7 @@ else()
     cmake_policy(VERSION 3.29)
 endif()
 
-find_package(fmt 
-    REQUIRED
-    HINTS "vendor/fmt/build/"
-)
+find_package(fmt REQUIRED HINTS "vendor/fmt/build/")
 
 project(App
     VERSION 0.1

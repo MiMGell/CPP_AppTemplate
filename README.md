@@ -1,2 +1,2 @@
-# ApplicationTemplate
-Simple build-system using makefile for making c++ application.
+# C++ Application Template
+a Simple C++ application template
