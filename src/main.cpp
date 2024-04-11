@@ -1,7 +1,7 @@
-#include "Core/Print.hpp"
+#include <fmt/printf.h>
 
 int main(void) {
-    print("Hello, World!\n");
-    
+    fmt::println("Hello, world!");
+
     return 0;
 }
