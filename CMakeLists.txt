@@ -14,15 +14,15 @@ project(App
     LANGUAGES CXX
 )
 
-add_executable(App
+add_executable(${PROJECT_NAME}
     "src/main.cpp"
 )
 
-target_link_libraries(App
+target_link_libraries(${PROJECT_NAME}
     fmt::fmt
 )
 
-set_target_properties(App 
+set_target_properties(${PROJECT_NAME}
     PROPERTIES
     CXX_STANDARD 20
     CXX_STANDARD_REQUIRED YES
