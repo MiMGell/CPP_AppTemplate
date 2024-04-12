@@ -6,7 +6,7 @@ else()
     cmake_policy(VERSION 3.29)
 endif()
 
-find_package(fmt REQUIRED HINTS "vendor/fmt/build/")
+add_subdirectory("vendor/fmt" EXCLUDE_FROM_ALL)
 
 project(App
     VERSION 0.1
@@ -19,6 +19,7 @@ add_executable(${PROJECT_NAME}
 )
 
 target_link_libraries(${PROJECT_NAME}
+    PRIVATE
     fmt::fmt
 )
 
